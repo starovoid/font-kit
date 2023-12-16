@@ -17,7 +17,7 @@ use pathfinder_geometry::rect::RectF;
 /// Various metrics that apply to the entire font.
 ///
 /// For OpenType fonts, these mostly come from the `OS/2` table.
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Default)]
 pub struct Metrics {
     /// The number of font units per em.
     ///

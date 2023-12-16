@@ -16,6 +16,7 @@ use crate::family_handle::FamilyHandle;
 use crate::family_name::FamilyName;
 use crate::font::Font;
 use crate::handle::Handle;
+use crate::loader::Loader;
 use crate::matching;
 use crate::properties::Properties;
 use std::any::Any;

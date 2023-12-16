@@ -12,8 +12,6 @@ edition = "2018"
 
 [features]
 default = ["source"]
-loader-freetype = ["freetype"]
-loader-freetype-default = ["loader-freetype"]
 source-fontconfig = ["yeslogic-fontconfig-sys"]
 source-fontconfig-dlopen = ["yeslogic-fontconfig-sys/dlopen"]
 source-fontconfig-default = ["source-fontconfig"]
@@ -28,6 +26,7 @@ libc = "0.2"
 log = "0.4.4"
 pathfinder_geometry = "0.5"
 pathfinder_simd = "0.5.1"
+ttf-parser = "0.20.0"
 
 [dependencies.freetype]
 version = "0.7"
@@ -54,9 +53,6 @@ features = ["dwrite", "minwindef", "sysinfoapi", "winbase", "winnt"]
 core-foundation = "0.9"
 core-graphics = "0.22"
 core-text = "19.1.0"
-
-[target.'cfg(not(any(target_family = "windows", target_os = "macos", target_os = "ios")))'.dependencies]
-freetype = "0.7"
 
 [target.'cfg(not(any(target_family = "windows", target_os = "macos", target_os = "ios", target_arch = "wasm32")))'.dependencies]
 yeslogic-fontconfig-sys = "5.0"
